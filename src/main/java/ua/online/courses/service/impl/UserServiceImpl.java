@@ -1,5 +1,7 @@
 package ua.online.courses.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,11 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User findById(int id) {
 		return userRepository.findOne(id);
+	}
+
+	@Override
+	public List<User> findAllUsers() {
+		return userRepository.findAll();
 	}
 	
 	

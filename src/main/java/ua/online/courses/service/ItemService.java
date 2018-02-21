@@ -12,4 +12,6 @@ public interface ItemService {
 	
 	Item findById(int id);
 	
+	void deleteItemById(int id);
+	
 }

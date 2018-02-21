@@ -14,11 +14,22 @@ public class BaseController {
 	}
 
 	@GetMapping("/info")
-	public String userInfo(Model model) {
+	public String info(Model model) {
 		model.addAttribute("title", "Infor page");
-		return "info";
+		return "human/add";
 	}
 	
+	@GetMapping("/adminMain")
+	public String adminInfo(Model model) {
+		model.addAttribute("title", "Infor page");
+		return "admin/adminMain";
+	}
+	
+	@GetMapping("/userMain")
+	public String userInfo(Model model) {
+		model.addAttribute("title", "Infor page");
+		return "user/userMain";
+	}
 	
 	
 	@GetMapping("/login")

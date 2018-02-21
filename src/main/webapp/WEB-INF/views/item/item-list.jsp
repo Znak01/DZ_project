@@ -7,7 +7,6 @@
 <th>ID</th>
 <th>Name</th>
 <th>Price</th>
-<th>Edit</th>
 </tr>
 <c:forEach items="${itemList}" var="item">
 <tr>
@@ -15,9 +14,6 @@
 <td>${item.name}</td>
 <td>${item.price}</td>
 </tr>
-<td>
-<a href="${pageContext.request.contextPath}/item/${item.id}/edit">Edit</a>
-</td>
 </c:forEach>
 
 </table>

@@ -30,6 +30,12 @@ public class ItemImpl implements ItemService {
 		return itemRepository.findOne(id);
 	}
 
+	@Override
+	public void deleteItemById(int id) {
+		itemRepository.delete(id);
+		
+	}
+
 	
 	
 }

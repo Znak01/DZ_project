@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,16 +31,28 @@ public class UserController {
 		model.addAttribute("user", user);
 		System.out.println(user);
 		
-		return "user/user";
+		return "user/userMain";
+	}
+	
+	@GetMapping("/list")
+	public String showItemList(Model model) {
+		model.addAttribute("userList", userService.findAllUsers());
+		return "user/profile/user-list";
 	}
 	
 	@GetMapping("/{userId}/edit")
-	public String editItem(Model model, @PathVariable("itemId") int id) {
+	public String editItem(Model model, @PathVariable("userId") int id) {
 		User user = userService.findById(id);
 		model.addAttribute("user", user);
 		System.out.println(user);
 		
 		return "user/profile/edit-user";
+	}
+	
+	@PostMapping("{userId}/edit")
+	public String editItem(@ModelAttribute("user") User user) {
+		userService.save(user);
+		return "redirect:/user/list";
 	}
 	
 	@GetMapping("/add")
