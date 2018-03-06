@@ -87,8 +87,7 @@ public class HumanController {
 	}
 	
 	@PostMapping("/add")
-	public String save(@ModelAttribute("humanModel")
-	        Human human) {
+	public String save(@ModelAttribute("humanModel") Human human) {
 		humanService.saveHuman(human);
 		return "redirect:/human/list";
 	}

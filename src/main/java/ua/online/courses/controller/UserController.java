@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 import ua.online.courses.entity.Item;
 import ua.online.courses.entity.User;
 import ua.online.courses.service.UserService;
@@ -70,15 +71,15 @@ public class UserController {
 			@RequestParam("age") int age
 			) {
 		System.out.println(firstName + " " + lastName + " " + login + " " + password + " " + email + " " + age);
-		User user = new User();
-		user.setFirstName(firstName);
-		user.setLastName(lastName);
-		user.setLogin(login);
-		user.setPassword(password);
-		user.setEmail(email);
-		user.setAge(age);
-		
-		userService.save(user);
+//		User user = new User();
+//		user.setFirstName(firstName);
+//		user.setLastName(lastName);
+//		user.setLogin(login);
+//		user.setPassword(password);
+//		user.setEmail(email);
+//		user.setAge(age);
+//		
+//		userService.save(user);
 		
 		return "redirect:/";
 	}

@@ -41,11 +41,11 @@ public class ItemController {
 			@RequestParam("price") BigDecimal price
 			) {
 		System.out.println(name + " " + price);
-		Item item = new Item();
-		item.setName(name);
-		item.setPrice(price);
+//		Item item = new Item();
+//		item.setName(name);
+//		item.setPrice(price);
 		
-		itemService.save(item);
+//		itemService.save(item);
 		
 		return "redirect:/item/list";
 	}

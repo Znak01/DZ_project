@@ -54,6 +54,27 @@ public class Human extends BaseEntity {
 	public Human() {
 	}
 
+	public Human(String firstName, String lastName, String age, String country, String gender, String mail,
+			Degree degree, String socialnet, String programmingLangueg, String oc, String ex, String rang, String teh,
+			String search, String norm) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.country = country;
+		this.gender = gender;
+		this.mail = mail;
+		this.degree = degree;
+		this.socialnet = socialnet;
+		this.programmingLangueg = programmingLangueg;
+		this.oc = oc;
+		this.ex = ex;
+		this.rang = rang;
+		this.teh = teh;
+		this.search = search;
+		this.norm = norm;
+	}
+
 	
 	
 	

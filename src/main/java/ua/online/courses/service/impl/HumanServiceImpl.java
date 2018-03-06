@@ -13,12 +13,12 @@ import ua.online.courses.service.HumanService;
 @Service
 public class HumanServiceImpl implements HumanService {
 
+	@Autowired
 	private HumanRepository humanRepository;
 	
 	
 	@Autowired
 	public HumanServiceImpl(HumanRepository humanRepository) {
-		super();
 		this.humanRepository = humanRepository;
 	}
 
